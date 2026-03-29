@@ -1,0 +1,42 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #0d1117; }
+
+    .text {
+      font-family: 'Fira Code', monospace;
+      font-size: 28px;
+      font-weight: bold;
+      fill: url(#grad);
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: slideFade 6s ease-in-out infinite;
+    }
+
+    .line1 { animation-delay: 0s; }
+    .line2 { animation-delay: 1.5s; }
+    .line3 { animation-delay: 3s; }
+    .line4 { animation-delay: 4.5s; }
+
+    @keyframes slideFade {
+      0%   { opacity: 0; transform: translateX(-40px); }
+      10%  { opacity: 1; transform: translateX(0); }
+      30%  { opacity: 1; transform: translateX(0); }
+      40%  { opacity: 0; transform: translateX(20px); }
+      100% { opacity: 0; transform: translateX(20px); }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="grad">
+      <stop offset="0%" stop-color="#00F7FF"/>
+      <stop offset="100%" stop-color="#FF6EC7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="200" class="bg"/>
+
+  <text x="50%" y="60" text-anchor="middle" class="text line1">Hi 👋</text>
+  <text x="50%" y="100" text-anchor="middle" class="text line2">I am Aditya Pande</text>
+  <text x="50%" y="140" text-anchor="middle" class="text line3">DevOps Engineer</text>
+  <text x="50%" y="180" text-anchor="middle" class="text line4">Full Stack Developer</text>
+</svg>
