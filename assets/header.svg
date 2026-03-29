@@ -1,42 +1,89 @@
-<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .bg { fill: #0d1117; }
-
-    .text {
-      font-family: 'Fira Code', monospace;
-      font-size: 28px;
-      font-weight: bold;
-      fill: url(#grad);
-      opacity: 0;
-      transform: translateX(-40px);
-      animation: slideFade 6s ease-in-out infinite;
-    }
-
-    .line1 { animation-delay: 0s; }
-    .line2 { animation-delay: 1.5s; }
-    .line3 { animation-delay: 3s; }
-    .line4 { animation-delay: 4.5s; }
-
-    @keyframes slideFade {
-      0%   { opacity: 0; transform: translateX(-40px); }
-      10%  { opacity: 1; transform: translateX(0); }
-      30%  { opacity: 1; transform: translateX(0); }
-      40%  { opacity: 0; transform: translateX(20px); }
-      100% { opacity: 0; transform: translateX(20px); }
-    }
-  </style>
+<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
-    <linearGradient id="grad">
+    <!-- Gradient -->
+    <linearGradient id="gradText">
       <stop offset="0%" stop-color="#00F7FF"/>
       <stop offset="100%" stop-color="#FF6EC7"/>
     </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <rect width="800" height="200" class="bg"/>
+  <!-- Background -->
+  <rect width="800" height="220" fill="#0d1117"/>
 
-  <text x="50%" y="60" text-anchor="middle" class="text line1">Hi 👋</text>
-  <text x="50%" y="100" text-anchor="middle" class="text line2">I am Aditya Pande</text>
-  <text x="50%" y="140" text-anchor="middle" class="text line3">DevOps Engineer</text>
-  <text x="50%" y="180" text-anchor="middle" class="text line4">Full Stack Developer</text>
+  <!-- Floating circles (cloud/dev feel) -->
+  <circle cx="100" cy="50" r="6" fill="#00F7FF" opacity="0.2">
+    <animate attributeName="cy" values="50;30;50" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="700" cy="180" r="5" fill="#FF6EC7" opacity="0.2">
+    <animate attributeName="cy" values="180;160;180" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="400" cy="30" r="4" fill="#00F7FF" opacity="0.15">
+    <animate attributeName="cy" values="30;50;30" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Floating rectangles (tech blocks) -->
+  <rect x="50" y="150" width="10" height="10" fill="#FF6EC7" opacity="0.2">
+    <animate attributeName="y" values="150;130;150" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <rect x="720" y="40" width="8" height="8" fill="#00F7FF" opacity="0.2">
+    <animate attributeName="y" values="40;60;40" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <style>
+    .text {
+      font-family: 'Fira Code', monospace;
+      font-size: 30px;
+      font-weight: bold;
+      fill: url(#gradText);
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: slideFade 8s ease-in-out infinite;
+    }
+
+    .shadow {
+      fill: #000;
+      opacity: 0.3;
+      transform: translateX(-35px);
+      animation: slideFade 8s ease-in-out infinite;
+    }
+
+    .line1 { animation-delay: 0s; }
+    .line2 { animation-delay: 2s; }
+    .line3 { animation-delay: 4s; }
+    .line4 { animation-delay: 6s; }
+
+    @keyframes slideFade {
+      0% { opacity: 0; transform: translateX(-40px); }
+      10% { opacity: 1; transform: translateX(0); }
+      30% { opacity: 1; }
+      40% { opacity: 0; transform: translateX(20px); }
+      100% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Shadow -->
+  <text x="50%" y="70" text-anchor="middle" class="shadow line1">Hi</text>
+  <text x="50%" y="110" text-anchor="middle" class="shadow line2">I am Aditya Pande</text>
+  <text x="50%" y="150" text-anchor="middle" class="shadow line3">DevOps Engineer</text>
+  <text x="50%" y="190" text-anchor="middle" class="shadow line4">Full Stack Developer</text>
+
+  <!-- Main Text -->
+  <text x="50%" y="70" text-anchor="middle" class="text line1" filter="url(#glow)">Hi</text>
+  <text x="50%" y="110" text-anchor="middle" class="text line2" filter="url(#glow)">I am Aditya Pande</text>
+  <text x="50%" y="150" text-anchor="middle" class="text line3" filter="url(#glow)">DevOps Engineer</text>
+  <text x="50%" y="190" text-anchor="middle" class="text line4" filter="url(#glow)">Full Stack Developer</text>
+
 </svg>
