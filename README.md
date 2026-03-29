@@ -70,6 +70,6 @@ Tech: Docker, GitHub Actions, Kubernetes
 ## 📬 Connect
 
 - 💼 LinkedIn: https://www.linkedin.com/in/aditya-dev-pande/  
-- 📧 Email: your-email@example.com  
+- 📧 Email: aditya.dev.pande@gmail.com  
 
 ---
