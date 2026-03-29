@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://www.google.com/search?q=https://readme-typing-svg.demolab.com%3Ffont%3DFira%2BCode%26weight%3D700%26size%3D32%26pause%3D1000%26color%3D00F0FF%26center%3Dtrue%26vCenter%3Dtrue%26width%3D600%26lines%3DHi+👋+This+is+Aditya+Pande;DevOps+%2B+Full+Stack+Engineer;Architecting+Scalable+Systems;Automating+the+Future" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=00F7FF&center=true&vCenter=true&width=600&lines=Hi+👋+This+is+Aditya+Pande;DevOps+Engineer;Full+Stack+Developer" alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -24,25 +24,25 @@
 ☁️ DevOps & Cloud Architecture
 
 <p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/AWS-%2523FF9900.svg%3Fstyle%3Dfor-the-badge%26logo%3Damazon-aws%26logoColor%3Dwhite" alt="AWS"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Docker-2CA5E0%3Fstyle%3Dfor-the-badge%26logo%3Ddocker%26logoColor%3Dwhite" alt="Docker"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/kubernetes-%2523326ce5.svg%3Fstyle%3Dfor-the-badge%26logo%3Dkubernetes%26logoColor%3Dwhite" alt="Kubernetes"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Terraform-%25235835CC.svg%3Fstyle%3Dfor-the-badge%26logo%3Dterraform%26logoColor%3Dwhite" alt="Terraform"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/github%2520actions-%25232671E5.svg%3Fstyle%3Dfor-the-badge%26logo%3Dgithubactions%26logoColor%3Dwhite" alt="GitHub Actions"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Jenkins-D24939%3Fstyle%3Dfor-the-badge%26logo%3DJenkins%26logoColor%3Dwhite" alt="Jenkins"/>
+<img src="https://www.google.com/url?sa=E&source=gmail&q=https://img.shields.io/badge/AWS-232F3E?style=for-the-badge%26logo=amazonwebservices%26logoColor=white" alt="AWS"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Docker-2496ED%3Fstyle%3Dfor-the-badge%26logo%3Ddocker%26logoColor%3Dwhite" alt="Docker"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Kubernetes-326CE5%3Fstyle%3Dfor-the-badge%26logo%3Dkubernetes%26logoColor%3Dwhite" alt="Kubernetes"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Terraform-844FBA%3Fstyle%3Dfor-the-badge%26logo%3Dterraform%26logoColor%3Dwhite" alt="Terraform"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/GitHub_Actions-2088FF%3Fstyle%3Dfor-the-badge%26logo%3Dgithubactions%26logoColor%3Dwhite" alt="GitHub Actions"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Jenkins-D24939%3Fstyle%3Dfor-the-badge%26logo%3Djenkins%26logoColor%3Dwhite" alt="Jenkins"/>
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/Linux-FCC624%3Fstyle%3Dfor-the-badge%26logo%3Dlinux%26logoColor%3Dblack" alt="Linux"/>
 </p>
 
 💻 Full Stack Development
 
 <p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/node.js-6DA55F%3Fstyle%3Dfor-the-badge%26logo%3Dnode.js%26logoColor%3Dwhite" alt="Node.js"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/typescript-%2523007ACC.svg%3Fstyle%3Dfor-the-badge%26logo%3Dtypescript%26logoColor%3Dwhite" alt="TypeScript"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/python-3670A0%3Fstyle%3Dfor-the-badge%26logo%3Dpython%26logoColor%3Dffdd54" alt="Python"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/react-%252320232a.svg%3Fstyle%3Dfor-the-badge%26logo%3Dreact%26logoColor%3D%252361DAFB" alt="React"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Next-black%3Fstyle%3Dfor-the-badge%26logo%3Dnext.js%26logoColor%3Dwhite" alt="Next.js"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/PostgreSQL-316192%3Fstyle%3Dfor-the-badge%26logo%3Dpostgresql%26logoColor%3Dwhite" alt="PostgreSQL"/>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/redis-%2523DD0031.svg%3Fstyle%3Dfor-the-badge%26logo%3Dredis%26logoColor%3Dwhite" alt="Redis"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Node.js-339933%3Fstyle%3Dfor-the-badge%26logo%3Dnodedotjs%26logoColor%3Dwhite" alt="Node.js"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/TypeScript-3178C6%3Fstyle%3Dfor-the-badge%26logo%3Dtypescript%26logoColor%3Dwhite" alt="TypeScript"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Python-3776AB%3Fstyle%3Dfor-the-badge%26logo%3Dpython%26logoColor%3Dwhite" alt="Python"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/React-20232A%3Fstyle%3Dfor-the-badge%26logo%3Dreact%26logoColor%3D61DAFB" alt="React"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Next.js-000000%3Fstyle%3Dfor-the-badge%26logo%3Dnextdotjs%26logoColor%3Dwhite" alt="Next.js"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/PostgreSQL-4169E1%3Fstyle%3Dfor-the-badge%26logo%3Dpostgresql%26logoColor%3Dwhite" alt="PostgreSQL"/>
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Redis-DC382D%3Fstyle%3Dfor-the-badge%26logo%3Dredis%26logoColor%3Dwhite" alt="Redis"/>
 </p>
 
 🏗️ Featured Projects
@@ -75,7 +75,7 @@ AWS Lambda, DynamoDB, Python
 
 <div align="center">
 <img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DAdityaPande%26show_icons%3Dtrue%26theme%3Dtokyonight%26hide_border%3Dtrue%26count_private%3Dtrue" alt="GitHub Stats" width="48%" />
-<img src="https://www.google.com/search?q=https://github-readme-streak-stats.herokuapp.com/%3Fuser%3DAdityaPande%26theme%3Dtokyonight%26hide_border%3Dtrue" alt="GitHub Streak" width="48%" />
+<img src="https://www.google.com/search?q=https://streak-stats.demolab.com/%3Fuser%3DAdityaPande%26theme%3Dtokyonight%26hide_border%3Dtrue" alt="GitHub Streak" width="48%" />
 </div>
 
 
@@ -108,8 +108,8 @@ AWS Lambda, DynamoDB, Python
 <a href="mailto:contact@yourdomain.com">
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/Email-D14836%3Fstyle%3Dfor-the-badge%26logo%3Dgmail%26logoColor%3Dwhite" alt="Email" />
 </a>
-<a href="https://www.google.com/search?q=https://linkedin.com/in/adityapande">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-0077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" alt="LinkedIn" />
+<a href="https://www.linkedin.com/in/aditya-dev-pande/">
+<img src="https://www.google.com/url?sa=E&source=gmail&q=https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge%26logo=linkedin%26logoColor=white" alt="LinkedIn" />
 </a>
 <a href="https://www.google.com/search?q=https://twitter.com/adityapande">
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/Twitter-1DA1F2%3Fstyle%3Dfor-the-badge%26logo%3Dtwitter%26logoColor%3Dwhite" alt="Twitter" />
