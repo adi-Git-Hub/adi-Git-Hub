@@ -12,24 +12,11 @@
 
 ## `01` ⌁ Identity
 
-<table>
-<tr>
-<td width="100%">
+<div align="center">
 
-```js
-const engineer = {
-  name: "Aditya Pande",
-  role: "Full Stack Developer",
-  focus: ["Cloud Architecture", "DevOps / CI-CD", "System Design"],
-  mission: "Building systems that scale.",
-  approach: "Engineering reliable software — from frontend to infrastructure.",
-  status: "🟢 shipping code · scaling systems · automating everything"
-};
-```
+<img src="https://raw.githubusercontent.com/adi-Git-Hub/adi-Git-Hub/main/assets/identity-terminal.svg" width="100%"/>
 
-</td>
-</tr>
-</table>
+</div>
 
 <br/>
 

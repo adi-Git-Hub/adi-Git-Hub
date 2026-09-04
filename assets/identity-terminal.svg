@@ -1,0 +1,49 @@
+<svg width="720" height="340" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F7FF"/>
+      <stop offset="50%" stop-color="#8F6BFF"/>
+      <stop offset="100%" stop-color="#FF3CAC"/>
+    </linearGradient>
+    <clipPath id="cardClip">
+      <rect x="1" y="1" width="718" height="338" rx="10"/>
+    </clipPath>
+    <clipPath id="revealClip">
+      <rect x="0" y="40" width="720" height="0">
+        <animate attributeName="height" values="0;240;240;0;0" keyTimes="0;0.3;0.8;0.85;1" dur="12s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect x="1" y="1" width="718" height="338" fill="#0d1117"/>
+    <rect x="1" y="1" width="718" height="39" fill="#161b22"/>
+
+    <circle cx="26" cy="20" r="6" fill="#ff5f57"/>
+    <circle cx="48" cy="20" r="6" fill="#ffbd2e"/>
+    <circle cx="70" cy="20" r="6" fill="#28c840"/>
+    <text x="360" y="25" text-anchor="middle" font-family="'Fira Code', monospace" font-size="13" fill="#8b949e">identity.js</text>
+
+    <circle cx="672" cy="20" r="4" fill="#00ff9d">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="682" y="24" font-family="'Fira Code', monospace" font-size="11" letter-spacing="1" fill="#7dffc4">LIVE</text>
+
+    <g clip-path="url(#revealClip)" font-family="'Fira Code', monospace" font-size="14">
+      <text x="30" y="72"><tspan fill="#FF6EC7">const</tspan><tspan fill="#c9d1d9"> engineer = {</tspan></text>
+      <text x="30" y="100"><tspan fill="#66f7ff">  name</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#c9a6ff">"Aditya Pande"</tspan><tspan fill="#c9d1d9">,</tspan></text>
+      <text x="30" y="128"><tspan fill="#66f7ff">  role</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#c9a6ff">"Full Stack Developer"</tspan><tspan fill="#c9d1d9">,</tspan></text>
+      <text x="30" y="156"><tspan fill="#66f7ff">  focus</tspan><tspan fill="#c9d1d9">: [</tspan><tspan fill="#c9a6ff">"Cloud Architecture"</tspan><tspan fill="#c9d1d9">, </tspan><tspan fill="#c9a6ff">"DevOps / CI-CD"</tspan><tspan fill="#c9d1d9">, </tspan><tspan fill="#c9a6ff">"System Design"</tspan><tspan fill="#c9d1d9">],</tspan></text>
+      <text x="30" y="184"><tspan fill="#66f7ff">  mission</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#c9a6ff">"Building systems that scale."</tspan><tspan fill="#c9d1d9">,</tspan></text>
+      <text x="30" y="212"><tspan fill="#66f7ff">  approach</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#c9a6ff">"Engineering reliable software — from frontend to infrastructure."</tspan><tspan fill="#c9d1d9">,</tspan></text>
+      <text x="30" y="240"><tspan fill="#66f7ff">  status</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#c9a6ff">"🟢 shipping code · scaling systems · automating everything"</tspan></text>
+      <text x="30" y="268"><tspan fill="#c9d1d9">};</tspan></text>
+    </g>
+
+    <rect x="48" y="256" width="9" height="16" fill="#66f7ff">
+      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <rect x="1" y="1" width="718" height="338" rx="10" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" opacity="0.6"/>
+</svg>
