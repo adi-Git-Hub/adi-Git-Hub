@@ -4,14 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1000&color=00F7FF&center=true&vCenter=true&width=650&lines=Full+Stack+Developer;Cloud+%26+DevOps+Engineer;Designing+Fault-Tolerant+Systems;Automating+the+Path+to+Production)](https://git.io/typing-svg)
-
-<br/>
-
-[![GitHub](https://img.shields.io/badge/GitHub-adi--Git--Hub-0d1117?style=for-the-badge&logo=github&logoColor=00F7FF&labelColor=0d1117)](https://github.com/adi-Git-Hub)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Pande-0d1117?style=for-the-badge&logo=linkedin&logoColor=00F7FF&labelColor=0d1117)](https://www.linkedin.com/in/aditya-dev-pande/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-0d1117?style=for-the-badge&logo=vercel&logoColor=FF3CAC&labelColor=0d1117)](https://adi-git-hub.github.io/aditya-portfolio/)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-0d1117?style=for-the-badge&logo=gmail&logoColor=FF3CAC&labelColor=0d1117)](mailto:aditya.dev.pande@gmail.com)
+⌁&nbsp;&nbsp;[<img src="https://img.shields.io/badge/GitHub-0d1117?style=flat-square&logo=github&logoColor=00F7FF" height="26"/>](https://github.com/adi-Git-Hub)&nbsp;&nbsp;|&nbsp;&nbsp;[<img src="https://img.shields.io/badge/LinkedIn-0d1117?style=flat-square&logo=linkedin&logoColor=00F7FF" height="26"/>](https://www.linkedin.com/in/aditya-dev-pande/)&nbsp;&nbsp;|&nbsp;&nbsp;[<img src="https://img.shields.io/badge/Portfolio-0d1117?style=flat-square&logo=vercel&logoColor=FF3CAC" height="26"/>](https://adi-git-hub.github.io/aditya-portfolio/)&nbsp;&nbsp;|&nbsp;&nbsp;[<img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=gmail&logoColor=FF3CAC" height="26"/>](mailto:aditya.dev.pande@gmail.com)
 
 </div>
 
@@ -197,7 +190,7 @@ Scalability, reliability and observability are design inputs — not afterthough
 
 <div align="center">
 
-💻 `CODE` → 🔧 `GIT` → ⚙️ `CI` → ✅ `TESTS` → 🐳 `DOCKER` → 🏗️ `IaC` → ☁️ `CLOUD DEPLOY` → 📊 `MONITORING` → 🚨 `ALERTS`
+`CODE` → `GIT` → `CI` → `AUTOMATED TESTS` → `DOCKER` → `IaC` → `CLOUD DEPLOYMENT` → `MONITORING` → `ALERTS`
 
 </div>
 
@@ -291,9 +284,6 @@ Scalability, reliability and observability are design inputs — not afterthough
 
 <img src="https://raw.githubusercontent.com/adi-Git-Hub/adi-Git-Hub/main/assets/footer-banner.svg" width="100%"/>
 
-[![GitHub](https://img.shields.io/badge/GitHub-adi--Git--Hub-0d1117?style=for-the-badge&logo=github&logoColor=00F7FF&labelColor=0d1117)](https://github.com/adi-Git-Hub)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Pande-0d1117?style=for-the-badge&logo=linkedin&logoColor=00F7FF&labelColor=0d1117)](https://www.linkedin.com/in/aditya-dev-pande/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-0d1117?style=for-the-badge&logo=vercel&logoColor=FF3CAC&labelColor=0d1117)](https://adi-git-hub.github.io/aditya-portfolio/)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-0d1117?style=for-the-badge&logo=gmail&logoColor=FF3CAC&labelColor=0d1117)](mailto:aditya.dev.pande@gmail.com)
+⌁&nbsp;&nbsp;[<img src="https://img.shields.io/badge/GitHub-0d1117?style=flat-square&logo=github&logoColor=00F7FF" height="26"/>](https://github.com/adi-Git-Hub)&nbsp;&nbsp;|&nbsp;&nbsp;[<img src="https://img.shields.io/badge/LinkedIn-0d1117?style=flat-square&logo=linkedin&logoColor=00F7FF" height="26"/>](https://www.linkedin.com/in/aditya-dev-pande/)&nbsp;&nbsp;|&nbsp;&nbsp;[<img src="https://img.shields.io/badge/Portfolio-0d1117?style=flat-square&logo=vercel&logoColor=FF3CAC" height="26"/>](https://adi-git-hub.github.io/aditya-portfolio/)&nbsp;&nbsp;|&nbsp;&nbsp;[<img src="https://img.shields.io/badge/Email-0d1117?style=flat-square&logo=gmail&logoColor=FF3CAC" height="26"/>](mailto:aditya.dev.pande@gmail.com)
 
 </div>
