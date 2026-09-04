@@ -1,89 +1,116 @@
-<svg width="800" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradient -->
-    <linearGradient id="gradText">
-      <stop offset="0%" stop-color="#00F7FF"/>
-      <stop offset="100%" stop-color="#FF6EC7"/>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060a"/>
+      <stop offset="100%" stop-color="#0b0f1a"/>
     </linearGradient>
-
-    <!-- Glow -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3"/>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F7FF"/>
+      <stop offset="50%" stop-color="#8F6BFF"/>
+      <stop offset="100%" stop-color="#FF3CAC"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
       <feMerge>
-        <feMergeNode/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="220" fill="#0d1117"/>
+  <rect width="1200" height="300" fill="url(#bgGrad)"/>
 
-  <!-- Floating circles (cloud/dev feel) -->
-  <circle cx="100" cy="50" r="6" fill="#00F7FF" opacity="0.2">
-    <animate attributeName="cy" values="50;30;50" dur="6s" repeatCount="indefinite"/>
+  <!-- tech grid -->
+  <g stroke="#1fd3ff" stroke-width="1" opacity="0.06">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
+    <line x1="800" y1="0" x2="800" y2="300"/>
+    <line x1="900" y1="0" x2="900" y2="300"/>
+    <line x1="1000" y1="0" x2="1000" y2="300"/>
+    <line x1="1100" y1="0" x2="1100" y2="300"/>
+  </g>
+
+  <!-- perspective floor -->
+  <g stroke="#8F6BFF" opacity="0.10">
+    <line x1="0" y1="300" x2="560" y2="150"/>
+    <line x1="200" y1="300" x2="580" y2="150"/>
+    <line x1="1200" y1="300" x2="640" y2="150"/>
+    <line x1="1000" y1="300" x2="620" y2="150"/>
+  </g>
+
+  <!-- constellation nodes -->
+  <g fill="#00F7FF" opacity="0.35">
+    <polyline points="140,55 260,35 380,58 500,32 610,50" fill="none" stroke="#00F7FF" stroke-width="1" opacity="0.25"/>
+    <circle cx="140" cy="55" r="3">
+      <animate attributeName="cy" values="55;40;55" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="35" r="2.4">
+      <animate attributeName="cy" values="35;48;35" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="58" r="3">
+      <animate attributeName="cy" values="58;44;58" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="32" r="2.4" fill="#FF6EC7">
+      <animate attributeName="cy" values="32;46;32" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="610" cy="50" r="3" fill="#FF6EC7">
+      <animate attributeName="cy" values="50;36;50" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- isometric cube -->
+  <g opacity="0.85">
+    <animate attributeName="opacity" values="0.55;0.9;0.55" dur="4.5s" repeatCount="indefinite"/>
+    <polygon points="1005,88 1075,124 1005,160 935,124" fill="#123049" stroke="#00F7FF" stroke-width="1.4" opacity="0.55"/>
+    <polygon points="935,124 1005,160 1005,232 935,196" fill="#1a1440" stroke="#8F6BFF" stroke-width="1.4" opacity="0.55"/>
+    <polygon points="1005,160 1075,124 1075,196 1005,232" fill="#3a1030" stroke="#FF3CAC" stroke-width="1.4" opacity="0.55"/>
+  </g>
+
+  <!-- HUD corner brackets -->
+  <g stroke="#00F7FF" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M22,52 L22,22 L52,22"/>
+    <path d="M1178,22 L1178,52"/>
+    <path d="M1148,22 L1178,22"/>
+    <path d="M22,248 L22,278 L52,278"/>
+    <path d="M1178,278 L1178,248"/>
+    <path d="M1148,278 L1178,278"/>
+  </g>
+
+  <!-- system status -->
+  <circle cx="862" cy="40" r="4" fill="#00ff9d">
+    <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
   </circle>
+  <text x="874" y="44" font-family="'Fira Code', monospace" font-size="11" letter-spacing="1.5" fill="#7dffc4">SYSTEM ONLINE</text>
 
-  <circle cx="700" cy="180" r="5" fill="#FF6EC7" opacity="0.2">
-    <animate attributeName="cy" values="180;160;180" dur="7s" repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="400" cy="30" r="4" fill="#00F7FF" opacity="0.15">
-    <animate attributeName="cy" values="30;50;30" dur="5s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Floating rectangles (tech blocks) -->
-  <rect x="50" y="150" width="10" height="10" fill="#FF6EC7" opacity="0.2">
-    <animate attributeName="y" values="150;130;150" dur="6s" repeatCount="indefinite"/>
+  <!-- scan line -->
+  <rect x="0" y="0" width="1200" height="2" fill="#00F7FF" opacity="0">
+    <animate attributeName="y" values="10;290;10" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.35;0" dur="9s" repeatCount="indefinite"/>
   </rect>
 
-  <rect x="720" y="40" width="8" height="8" fill="#00F7FF" opacity="0.2">
-    <animate attributeName="y" values="40;60;40" dur="5s" repeatCount="indefinite"/>
+  <!-- title block -->
+  <text x="80" y="150" font-family="'Fira Code', monospace" font-size="62" font-weight="700" fill="url(#titleGrad)" filter="url(#glow)">ADITYA PANDE</text>
+  <text x="83" y="184" font-family="'Fira Code', monospace" font-size="21" letter-spacing="3" fill="#8fe8ff" filter="url(#softGlow)">FULL STACK DEVELOPER</text>
+  <text x="83" y="212" font-family="'Fira Code', monospace" font-size="15" letter-spacing="2" fill="#c9a6ff">CLOUD &#8226; DEVOPS &#8226; SYSTEM ARCHITECTURE</text>
+
+  <text x="83" y="248" font-family="'Fira Code', monospace" font-size="14" fill="#66f7ff" opacity="0.85">&gt; Engineering systems that scale, ship, and stay online.</text>
+  <rect x="568" y="236" width="9" height="16" fill="#66f7ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
-
-  <style>
-    .text {
-      font-family: 'Fira Code', monospace;
-      font-size: 30px;
-      font-weight: bold;
-      fill: url(#gradText);
-      opacity: 0;
-      transform: translateX(-40px);
-      animation: slideFade 8s ease-in-out infinite;
-    }
-
-    .shadow {
-      fill: #000;
-      opacity: 0.3;
-      transform: translateX(-35px);
-      animation: slideFade 8s ease-in-out infinite;
-    }
-
-    .line1 { animation-delay: 0s; }
-    .line2 { animation-delay: 2s; }
-    .line3 { animation-delay: 4s; }
-    .line4 { animation-delay: 6s; }
-
-    @keyframes slideFade {
-      0% { opacity: 0; transform: translateX(-40px); }
-      10% { opacity: 1; transform: translateX(0); }
-      30% { opacity: 1; }
-      40% { opacity: 0; transform: translateX(20px); }
-      100% { opacity: 0; }
-    }
-  </style>
-
-  <!-- Shadow -->
-  <text x="50%" y="70" text-anchor="middle" class="shadow line1">Hi</text>
-  <text x="50%" y="110" text-anchor="middle" class="shadow line2">I am Aditya Pande</text>
-  <text x="50%" y="150" text-anchor="middle" class="shadow line3">DevOps Engineer</text>
-  <text x="50%" y="190" text-anchor="middle" class="shadow line4">Full Stack Developer</text>
-
-  <!-- Main Text -->
-  <text x="50%" y="70" text-anchor="middle" class="text line1" filter="url(#glow)">Hi</text>
-  <text x="50%" y="110" text-anchor="middle" class="text line2" filter="url(#glow)">I am Aditya Pande</text>
-  <text x="50%" y="150" text-anchor="middle" class="text line3" filter="url(#glow)">DevOps Engineer</text>
-  <text x="50%" y="190" text-anchor="middle" class="text line4" filter="url(#glow)">Full Stack Developer</text>
-
 </svg>
