@@ -10,10 +10,8 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-adi--Git--Hub-0d1117?style=for-the-badge&logo=github&logoColor=00F7FF&labelColor=0d1117)](https://github.com/adi-Git-Hub)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Pande-0d1117?style=for-the-badge&logo=linkedin&logoColor=00F7FF&labelColor=0d1117)](https://www.linkedin.com/in/aditya-dev-pande/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-0d1117?style=for-the-badge&logo=vercel&logoColor=FF3CAC&labelColor=0d1117)](https://your-portfolio-url.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-0d1117?style=for-the-badge&logo=vercel&logoColor=FF3CAC&labelColor=0d1117)](https://adi-git-hub.github.io/aditya-portfolio/)
 [![Email](https://img.shields.io/badge/Email-Contact_Me-0d1117?style=for-the-badge&logo=gmail&logoColor=FF3CAC&labelColor=0d1117)](mailto:aditya.dev.pande@gmail.com)
-
-<!-- 🔧 Replace https://your-portfolio-url.com with your live portfolio link -->
 
 </div>
 
@@ -295,7 +293,7 @@ Scalability, reliability and observability are design inputs — not afterthough
 
 [![GitHub](https://img.shields.io/badge/GitHub-adi--Git--Hub-0d1117?style=for-the-badge&logo=github&logoColor=00F7FF&labelColor=0d1117)](https://github.com/adi-Git-Hub)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Pande-0d1117?style=for-the-badge&logo=linkedin&logoColor=00F7FF&labelColor=0d1117)](https://www.linkedin.com/in/aditya-dev-pande/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-0d1117?style=for-the-badge&logo=vercel&logoColor=FF3CAC&labelColor=0d1117)](https://your-portfolio-url.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Site-0d1117?style=for-the-badge&logo=vercel&logoColor=FF3CAC&labelColor=0d1117)](https://adi-git-hub.github.io/aditya-portfolio/)
 [![Email](https://img.shields.io/badge/Email-Contact_Me-0d1117?style=for-the-badge&logo=gmail&logoColor=FF3CAC&labelColor=0d1117)](mailto:aditya.dev.pande@gmail.com)
 
 </div>
