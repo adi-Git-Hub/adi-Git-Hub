@@ -26,50 +26,50 @@
 <tr>
 <td width="50%" valign="top">
 
-**🧩 FULL STACK ENGINEERING**
-End-to-end product development, from UI to API
+**FULL STACK ENGINEERING**
+End-to-end product development, from UI to API to database
 
 </td>
 <td width="50%" valign="top">
 
-**☁️ CLOUD ARCHITECTURE**
-Scalable, resilient, fault-tolerant cloud systems
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**🔄 DEVOPS & CI/CD**
-Automated build → test → deploy pipelines
-
-</td>
-<td width="50%" valign="top">
-
-**🧠 SYSTEM DESIGN**
-Designing for scale, reliability & maintainability
+**CLOUD ARCHITECTURE**
+Designing systems around managed cloud infrastructure
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**🛡️ DEVSECOPS**
-Security woven into the delivery pipeline
+**DEVOPS & CI/CD**
+Automated build → test → deploy workflows
 
 </td>
 <td width="50%" valign="top">
 
-**🏗️ INFRASTRUCTURE AS CODE**
-Reproducible, version-controlled infrastructure
+**SYSTEM DESIGN**
+Structuring services, data and APIs before writing code
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**⚡ PERFORMANCE OPTIMIZATION**
-Measurable speed & cost efficiency gains
+**DEVSECOPS**
+Treating auth, secrets and access control as first-class concerns
+
+</td>
+<td width="50%" valign="top">
+
+**INFRASTRUCTURE AS CODE**
+Versioned, reviewable infrastructure and schema changes
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**PERFORMANCE**
+Identifying and fixing real bottlenecks, not guessing at them
 
 </td>
 <td width="50%" valign="top">
@@ -133,7 +133,7 @@ Measurable speed & cost efficiency gains
 
 ## `04` ⌁ Engineering & Architecture
 
-How I reason about a system, end to end:
+The diagram below is the request-flow model I default to when designing a new system — **a set of principles, not a claim that this exact stack is deployed in a specific production system.** Project-specific architecture is documented under Featured Projects.
 
 ```
 ┌──────────────────────────┐
@@ -146,7 +146,7 @@ How I reason about a system, end to end:
 └─────────────┬────────────┘
               │
 ┌─────────────▼────────────┐
-│       API GATEWAY        │
+│            API           │
 └─────────────┬────────────┘
               │
 ┌─────────────▼────────────┐
@@ -161,15 +161,27 @@ How I reason about a system, end to end:
               │
 ┌─────────────▼────────────┐
 │   CLOUD INFRASTRUCTURE   │
-│          (AWS)           │
 └─────────────┬────────────┘
               │
 ┌─────────────▼────────────┐
-│   CI/CD  +  MONITORING   │
+│   CI/CD + OBSERVABILITY  │
 └──────────────────────────┘
 ```
 
-Scalability, reliability and observability are design inputs — not afterthoughts.
+How I think about each concern, grounded in the projects below where I can point to it:
+
+| Concern | Approach |
+|---|---|
+| **Scalability** | Split systems into bounded pieces — auth, bookings and payments as separate route/controller layers — so one part changes without reshaping the rest *(see CloudCar)* |
+| **Reliability** | Don't trust a single channel for critical state — live order tracking runs over WebSockets with a polling fallback, since realtime alone isn't reliable on shared Wi-Fi *(see Jainism Cake & Café)* |
+| **Caching** | Cache read-heavy, slow-changing data close to where it's used, and invalidate it deliberately rather than on a blind timer |
+| **APIs & Contracts** | One shared source of truth for pricing/data shape between client and server, so the client can never send something the server didn't expect *(see Jainism Cake & Café)* |
+| **Databases** | Schema changes as versioned, numbered migrations, not manual edits *(see CloudCar)* |
+| **Authentication** | Hashed credentials and JWTs, with role checks enforced on the server — a 403, not just a hidden button *(see both projects)* |
+| **CI/CD** | Automated build → deploy on push via GitHub Actions |
+| **Infrastructure** | Config through environment variables; deployment checklists and hardening notes committed alongside the code, not kept in someone's head |
+| **Monitoring / Observability** | Principle: surface failure states explicitly instead of failing silently — an area I'm actively deepening with formal tooling |
+| **Security** | Password hashing, signature-verified webhooks, and authorization checks that run server-side |
 
 <br/>
 
@@ -177,93 +189,113 @@ Scalability, reliability and observability are design inputs — not afterthough
 
 <div align="center">
 
-`CODE` → `GIT` → `CI` → `AUTOMATED TESTS` → `DOCKER` → `IaC` → `CLOUD DEPLOYMENT` → `MONITORING` → `ALERTS`
+`CODE` → `GIT` → `CI` → `TESTS` → `DOCKER` → `IaC` → `CLOUD DEPLOYMENT` → `MONITORING` → `ALERTS`
 
 </div>
 
-| Stage | What Happens |
+| Stage | Why it exists |
 |---|---|
-| **Code** | Feature development & peer review |
-| **Git** | Version control & branching strategy |
-| **CI** | Automated build & validation |
-| **Automated Tests** | Unit & integration test suites |
-| **Docker** | Containerized, reproducible build artifacts |
-| **Infrastructure as Code** | Terraform-provisioned environments |
-| **Cloud Deployment** | Automated deployment to AWS |
-| **Monitoring** | Health, performance & cost tracking |
-| **Alerts** | Fast detection & incident response |
+| **Code** | Every change is scoped and reviewable before it merges |
+| **Git** | Branching and history give a safe way to collaborate and roll back |
+| **CI** | Catch integration issues before they reach anyone else |
+| **Automated Tests** | Verify behavior automatically instead of by hand, every time |
+| **Docker** | The same artifact runs the same way in dev, staging and production |
+| **Infrastructure as Code** | Infra changes are reviewed and reproducible, not manual clicks in a console |
+| **Cloud Deployment** | Ship a verified artifact without manual server access |
+| **Monitoring** | Know a system is unhealthy before a user has to report it |
+| **Alerts** | Get notified early enough that a small issue doesn't become an outage |
 
 <br/>
 
-## `06` ⌁ GitHub Analytics
+## `06` ⌁ Featured Projects
+
+<table>
+<tr><td width="100%">
+
+### CloudCar — Cloud-Native Car Rental Platform
+
+*Browse cars, book a vehicle and receive a secure email confirmation — a full-stack rental flow from UI to database.*
+
+**Architecture**
+`React (Vite) client → Express REST API → PostgreSQL` — schema versioned through numbered SQL migrations
+
+**Engineering**
+- JWT authentication with bcrypt-hashed passwords
+- Auth and bookings implemented as separate route/controller layers
+- File uploads handled via Multer; booking confirmations sent via Nodemailer
+- 4 numbered migrations (`001`–`004`) instead of ad-hoc schema edits
+- Deployment checklist and database-hardening notes committed with the code
+
+**Stack**
+React · Vite · Tailwind CSS · React Three Fiber · Node.js · Express · PostgreSQL · JWT
+
+**Links**
+[Repository](https://github.com/adi-Git-Hub/Cloud-Native-Full-stack-DevOps-Intregated-E-Car_Website) &nbsp;·&nbsp; [Live Demo](https://3d-e-commarce-new-update.vercel.app)
+
+</td></tr>
+</table>
+
+<br/>
+
+<table>
+<tr><td width="100%">
+
+### Jainism Cake & Café — Smart Ordering Platform
+
+*A customer scans a table QR code, orders, pays and tracks the kitchen live — no app, login or OTP.*
+
+**Architecture**
+`React client ↔ Socket.IO / REST ↔ Express API ↔ SQLite` — shared TypeScript contracts between client and server
+
+**Engineering**
+- One shared pricing module prices every order server-side, so a client can never be charged something it wasn't shown
+- Real-time order tracking over Socket.IO rooms with a polling fallback for unreliable Wi-Fi
+- Role-based staff portal (Admin / Counter / Kitchen) enforced both in the UI and on the server, not just hidden buttons
+- Pluggable payment provider interface — mock by default; a Razorpay adapter is implemented with HMAC signature verification, documented as untested against live credentials
+- Money stored as integer rupees to avoid floating-point errors; every row scoped by a `tenant_id`
+
+**Stack**
+React 19 · TypeScript · Vite · Tailwind CSS · Express · Socket.IO · SQLite
+
+**Links**
+[Repository](https://github.com/adi-Git-Hub/QR-Menu-System-jainism-cake-cafe) &nbsp;·&nbsp; Live Demo — _not publicly deployed_
+
+</td></tr>
+</table>
+
+<br/>
+
+## `07` ⌁ GitHub Analytics
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=adi-Git-Hub&style=for-the-badge&color=0d1117&label=PROFILE+VIEWS)
+<img src="https://github-readme-stats.vercel.app/api?username=adi-Git-Hub&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00F7FF&icon_color=FF6EC7&text_color=c9d1d9" width="44%"/>
+<img src="https://streak-stats.demolab.com?user=adi-Git-Hub&theme=tokyonight&hide_border=true&background=0d1117&ring=00F7FF&fire=FF6EC7&currStreakLabel=00F7FF" width="44%"/>
 
-<br/><br/>
-
-<img src="https://github-readme-stats.vercel.app/api?username=adi-Git-Hub&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00F7FF&icon_color=FF6EC7&text_color=c9d1d9" width="48%"/>
-<img src="https://streak-stats.demolab.com?user=adi-Git-Hub&theme=tokyonight&hide_border=true&background=0d1117&ring=00F7FF&fire=FF6EC7&currStreakLabel=00F7FF" width="48%"/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adi-Git-Hub&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00F7FF&text_color=c9d1d9" width="55%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=adi-Git-Hub&theme=react-dark&bg_color=0d1117&color=00F7FF&line=FF6EC7&point=ffffff&hide_border=true" width="80%"/>
 
 </div>
 
 <br/>
 
-## `07` ⌁ Contribution Matrix
+## `08` ⌁ Currently Building
 
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=adi-Git-Hub&theme=react-dark&bg_color=0d1117&color=00F7FF&line=FF6EC7&point=ffffff&hide_border=true" width="95%"/>
-
-<sub>// live activity — updates automatically from GitHub</sub>
-
-</div>
-
-<br/>
-
-## `08` ⌁ Featured Projects
-
-> ### 🔐 Authentication System
-> **Problem Solved** — Secure, scalable user authentication with fine-grained access control
-> **Architecture** — Stateless JWT auth with Redis-backed session & token revocation
-> **Tech Stack** — Node.js · PostgreSQL · Redis
-> **Key Challenge** — Balancing strong token security with low-latency verification at scale
->
-> [`↳ View Source`](https://github.com/adi-Git-Hub) &nbsp;·&nbsp; **Live Demo:** _not deployed_
-
-> ### ⚙️ CI/CD Pipeline
-> **Problem Solved** — Manual, error-prone deployments slowing down delivery
-> **Architecture** — Multi-stage pipeline with containerized builds & zero-downtime rollout
-> **Tech Stack** — Docker · GitHub Actions · Kubernetes
-> **Key Challenge** — Achieving zero-downtime deployments under continuous delivery
->
-> [`↳ View Source`](https://github.com/adi-Git-Hub) &nbsp;·&nbsp; **Live Demo:** _not deployed_
-
-<sub>🚧 More projects shipping soon — this section updates as new work goes live.</sub>
+Currently building:
+→ `<update this>`
+→ `<update this>`
+→ `<update this>`
 
 <br/>
 
 ## `09` ⌁ Engineering Principles
 
-- ⚡ Scalability over shortcuts
-- 🔁 Automation over repetition
-- 👁️ Observability over assumptions
-- 🔐 Security by design
-- 🏗️ Infrastructure as Code
-- 📈 Performance backed by measurement, not guesswork
-- 🧱 Clean, maintainable architecture
-- 🛡️ Reliability and fault tolerance by default
-
-<br/>
-
-## `10` ⌁ Currently Building
-
-- 🔭 Currently building: `<update this>`
-- 🌱 Currently exploring: `<update this>`
-- 🎯 Next milestone: `<update this>`
+- Automation over repetition
+- Security by design
+- Observability over assumptions
+- Measurable performance
+- Infrastructure as Code
+- Clean architecture
+- Reliability over shortcuts
 
 <br/>
 
