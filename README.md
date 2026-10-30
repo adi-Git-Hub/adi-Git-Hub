@@ -10,6 +10,14 @@
 
 <br/>
 
+<div align="center">
+
+<img src="assets/aditya-workspace.png" alt="Aditya Pande — Cinematic Workspace" width="1000"/>
+
+</div>
+
+<br/>
+
 ## `01` ⌁ Identity
 
 <div align="center">
